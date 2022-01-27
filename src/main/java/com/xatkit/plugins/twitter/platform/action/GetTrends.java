@@ -89,7 +89,6 @@ public class GetTrends extends RuntimeAction<TwitterPlatform> {
      *
      * @return 0 if there are no trends for the location, or a list of the trends for the WOEID
      */
-    @Override
     protected Object compute() {
         String result = "0";
         Twitter twitterService = this.runtimePlatform.getTwitterService();

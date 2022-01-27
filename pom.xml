@@ -17,14 +17,19 @@
     <packaging>jar</packaging>
 
     <properties>
+        <jslack.version>1.7.2</jslack.version>
         <lombok.version>1.18.12</lombok.version>
         <twitter4j.version>[4.0,)</twitter4j.version>
-        <jslack.version>1.7.2</jslack.version>
     </properties>
 
     <dependencies>
 
         <!-- Twitter -->
+
+        <dependency>
+            <groupId>com.github.seratch</groupId>
+            <artifactId>jslack</artifactId>
+        </dependency>
 
 		<dependency>
 			<groupId>org.twitter4j</groupId>
@@ -34,14 +39,11 @@
         <!-- Utils -->
 
         <dependency>
-            <groupId>com.github.seratch</groupId>
-            <artifactId>jslack</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <!-- Xatkit Internal -->
 
         <dependency>
             <groupId>com.xatkit</groupId>
@@ -53,17 +55,23 @@
     </dependencies>
 
     <dependencyManagement>
-
         <dependencies>
 
             <!-- Twitter -->
+
+            <dependency>
+                <groupId>com.github.seratch</groupId>
+                <artifactId>jslack</artifactId>
+                <version>${jslack.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.twitter4j</groupId>
                 <artifactId>twitter4j-core</artifactId>
                 <version>${twitter4j.version}</version>
             </dependency>
-
+            
+            
             <!-- Utils -->
 
             <dependency>
@@ -73,14 +81,7 @@
                 <scope>provided</scope>
             </dependency>
 
-            <dependency>
-                <groupId>com.github.seratch</groupId>
-                <artifactId>jslack</artifactId>
-                <version>${jslack.version}</version>
-            </dependency>
-
         </dependencies>
-
     </dependencyManagement>
 
 </project>
