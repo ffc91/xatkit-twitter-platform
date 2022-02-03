@@ -33,6 +33,11 @@ target
 # Eclipse
 .settings
 
+# Eclipse's .project & classpath
+**/.classpath
+**/.project
+
+
 # xatkit data
 **/data
 
